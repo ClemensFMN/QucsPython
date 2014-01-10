@@ -15,21 +15,21 @@ Underlying Idea
 - Python analyzes / displays the output
 
 
-Current Function
-----------------
+Sensitivity Analysis
+--------------------
 
 sensitivity.py, rc_ac.net
 
-rc_ac.net defines an R-C lowpass with parameters Rval and Cval (for the resistor and capacirot, respectively). Python processes this special netlist in that the value for the capacitor is fxed, while the value for the resistor is set to a random value (normal distribution with some mean and variance). Qucs is used to simulate the netlist and Python analyzes the corner frequency of the lowpass.
+rc_ac.net defines an R-C lowpass with parameters Rval and Cval (for the resistor and capacitor, respectively). Python processes this special netlist in that the value for the capacitor is fxed, while the value for the resistor is set to a random value (normal distribution with some mean and variance). Qucs is used to simulate the netlist and Python analyzes the corner frequency of the lowpass.
 
 After several hundred runs, the histogram of the corner frequency is plotted.
 
 
+Circuit Optimization
+--------------------
 
+circuit_opt.py, rc_ac.net
 
-Ideas
------
-
-Use an optimization framework to find "optimal" values for the components of a circuit. In the R-C lowpass, we could try to find a value for the resistor, so that the corner frequency is 4kHz (given a fixed capacitor value).
+Uses scipy's optimization framework to find a resistor value so that the corner frequency of the R-C lowpass equals 10 kHz.
 
 
