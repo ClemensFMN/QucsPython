@@ -1,0 +1,10 @@
+# Qucs 0.0.16  /home/cnovak/src/qucs/rc_ac.sch
+# you can use this file from octave with rc_ac_octave.m...
+
+Vac:V1 in gnd U="1 V" f="1 kHz"
+.AC:AC1 Start="1 Hz" Stop="10 MHz" Points="500" Type="log" 
+# Noise="no"
+
+
+R:R1 out in R="$Rval Ohm"
+C:C1 out gnd C="$Cval F"
